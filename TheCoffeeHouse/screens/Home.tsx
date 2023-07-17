@@ -1,24 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Button,
   Dimensions,
+  FlatList,
   Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import DeliveryMethod from '../components/Home/DeliveryMethod';
 import HomePageHeader from '../components/Home/HomepageHeader';
-
-const images = [
-  'https://file.hstatic.net/1000075078/file/banner_web_moi_-_mobile_3f817feca1514a09912db4458b06f9f7.jpg',
-  'https://file.hstatic.net/1000075078/file/mobile_ver_3a24c72a918f4df992d74c3f52b9dc0f.jpg',
-  'https://file.hstatic.net/1000075078/file/banner_web_moi_-_mobile_c7098573a5194a33b6da5ddfc5173caa.jpg',
-  'https://file.hstatic.net/1000075078/file/desktop_c372f0d12f214011806143bb0efb8257.jpg',
-  'https://file.hstatic.net/1000075078/file/banner_web_moi_-_mobile_a51bf3dda753456aa15b86c45e2e1099.jpg',
-];
+import Thumbnail from '../components/Home/Thumbnail';
 
 const recommendedProducts = [
   {
@@ -58,15 +53,45 @@ const recommendedProducts = [
     price: '19.000 đ',
   },
 ];
-const {width} = Dimensions.get('window');
-const height = width * 0.6;
+
+const tabs = [
+  {
+    title: 'Ưu đãi đặc biệt',
+  },
+  {
+    title: 'Cập nhật từ nhà',
+  },
+  {
+    title: '#CoffeeLover',
+  },
+];
+
+const data = [
+  {
+    name: 'Ronaldo',
+  },
+  {
+    name: 'Ronaldo',
+  },
+  {
+    name: 'Ronaldo',
+  },
+  {
+    name: 'Ronaldo',
+  },
+];
+const renderItem = e => {
+  console.log(e);
+};
 const HomeScreen = () => {
+  const [tab, setTab] = useState('Ưu đãi đặc biệt');
+
   return (
     <SafeAreaView style={{backgroundColor: '#FFFFFF', flex: 1}}>
       <HomePageHeader />
       <ScrollView>
         <DeliveryMethod />
-        <View
+        {/* <View
           style={{
             marginTop: 10,
             width,
@@ -92,7 +117,8 @@ const HomeScreen = () => {
               />
             ))}
           </ScrollView>
-        </View>
+        </View> */}
+        <Thumbnail />
 
         {/*Recommendation Section */}
         <Text
@@ -151,6 +177,46 @@ const HomeScreen = () => {
             </View>
           ))}
         </ScrollView>
+
+        {/*Recommendation Section */}
+        <Text
+          style={{
+            marginTop: 40,
+            marginStart: 10,
+            fontSize: 17,
+            fontFamily: 'SourceSerif4-SemiBold',
+            color: '#000000',
+          }}>
+          Khám phá thêm
+        </Text>
+        {/* List tab */}
+        <View
+          style={{
+            marginTop: 10,
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around',
+          }}>
+          {tabs.map((item, index) => (
+            <TouchableOpacity
+              key={index}
+              style={item.title === tab ? styles.btnTabActive : styles.btnTab}
+              onPress={() => setTab(item.title)}>
+              <Text
+                style={
+                  item.title === tab ? styles.textTabActive : styles.textTab
+                }>
+                {item.title}
+              </Text>
+            </TouchableOpacity>
+          ))}
+        </View>
+
+        <FlatList
+          data={data}
+          keyExtractor={(e, i) => i.toString()}
+          renderItem={renderItem}
+        />
       </ScrollView>
     </SafeAreaView>
   );
@@ -159,6 +225,8 @@ const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal: 10,
+    justifyContent: 'center',
     // paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
@@ -167,6 +235,34 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 42,
+  },
+  listTab: {
+    flex: 1,
+    backgroundColor: '#fff',
+    padding: 15,
+  },
+  btnTab: {
+    backgroundColor: '#FEFEFE',
+    height: 30,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  btnTabActive: {
+    backgroundColor: '#FEF7E7',
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 30,
+  },
+  textTab: {
+    paddingHorizontal: 10,
+    fontFamily: 'SourceSerif4-Medium',
+    color: '#717171',
+  },
+  textTabActive: {
+    paddingHorizontal: 10,
+    fontFamily: 'SourceSerif4-Medium',
+    color: '#CA7E28',
   },
 });
 
