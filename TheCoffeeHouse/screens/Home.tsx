@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import {
-  Button,
-  Dimensions,
   FlatList,
-  Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -13,6 +10,7 @@ import {
 } from 'react-native';
 import DeliveryMethod from '../components/Home/DeliveryMethod';
 import HomePageHeader from '../components/Home/HomepageHeader';
+import Recommendation from '../components/Home/Recommendation';
 import Thumbnail from '../components/Home/Thumbnail';
 
 const recommendedProducts = [
@@ -91,33 +89,6 @@ const HomeScreen = () => {
       <HomePageHeader />
       <ScrollView>
         <DeliveryMethod />
-        {/* <View
-          style={{
-            marginTop: 10,
-            width,
-            height,
-          }}>
-          <ScrollView
-            pagingEnabled
-            horizontal
-            // style={{width, height}}
-          >
-            {images.map((image, index) => (
-              <Image
-                key={index}
-                source={{
-                  uri: image,
-                }}
-                style={{
-                  width,
-                  height,
-                  resizeMode: 'cover',
-                  borderRadius: 30,
-                }}
-              />
-            ))}
-          </ScrollView>
-        </View> */}
         <Thumbnail />
 
         {/*Recommendation Section */}
@@ -132,53 +103,9 @@ const HomeScreen = () => {
           Gợi ý riêng cho duynhan:
         </Text>
 
-        <ScrollView horizontal style={{marginTop: 20}}>
-          {recommendedProducts.map((item, index) => (
-            <View
-              key={index}
-              style={{marginHorizontal: 15, width: 120, height: 220}}>
-              <Image
-                source={{
-                  uri: item.image,
-                }}
-                style={{width: 120, height: 120, borderRadius: 10}}
-              />
-              <Text
-                style={{
-                  fontFamily: 'SourceSerif4-SemiBold',
-                  marginTop: 5,
-                  color: '#000000',
-                }}>
-                {item.name}
-              </Text>
-              <Text style={{fontFamily: 'SourceSerif4-Light'}}>
-                {item.price}
-              </Text>
-              <View
-                style={{
-                  width: '100%',
-                  height: 30,
-                  bottom: 0,
-                  backgroundColor: '#FBF3E0',
-                  position: 'absolute',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  borderRadius: 5,
-                }}>
-                <Text
-                  style={{
-                    alignContent: 'center',
-                    fontFamily: 'SourceSerif4-Medium',
-                    color: '#C68045',
-                  }}>
-                  Chọn
-                </Text>
-              </View>
-            </View>
-          ))}
-        </ScrollView>
+        <Recommendation />
 
-        {/*Recommendation Section */}
+        {/*Exploration Section */}
         <Text
           style={{
             marginTop: 40,
@@ -189,6 +116,7 @@ const HomeScreen = () => {
           }}>
           Khám phá thêm
         </Text>
+
         {/* List tab */}
         <View
           style={{
