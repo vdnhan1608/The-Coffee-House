@@ -23,6 +23,7 @@ const Thumbnail = () => {
       <ScrollView
         pagingEnabled
         horizontal
+        showsHorizontalScrollIndicator={false}
         // style={{width, height}}
       >
         {images.map((image, index) => (

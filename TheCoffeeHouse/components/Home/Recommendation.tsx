@@ -41,7 +41,10 @@ const recommendedProducts = [
 
 const Recommendation = () => {
   return (
-    <ScrollView horizontal style={{marginTop: 20}}>
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      style={{marginTop: 20}}>
       {recommendedProducts.map((item, index) => (
         <View
           key={index}
