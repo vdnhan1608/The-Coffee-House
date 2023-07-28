@@ -73,7 +73,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',
-    height: 400,
+    height: 'auto',
+    backgroundColor: '#FFFFFF',
   },
   item: {
     width: '25%',
@@ -84,6 +85,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
+    height: 150,
   },
   image: {
     width: 80,
