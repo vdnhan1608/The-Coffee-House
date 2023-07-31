@@ -1,7 +1,7 @@
-import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
-import {faHeart, faPlusCircle} from '@fortawesome/free-solid-svg-icons';
+import {faPlusCircle} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import React from 'react';
+import {Image, StyleSheet, Text, View} from 'react-native';
 
 const drinks = [
   {
