@@ -1,33 +1,16 @@
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Homepage } from './pages/Homepage';
-import { Collections } from './pages/Collections';
-import { Menu } from './pages/Menu';
+import { Navigation } from './components/Navigation';
 import { Blogs } from './pages/Blogs';
+import { Collections } from './pages/Collections';
+import { Homepage } from './pages/Homepage';
+import { Menu } from './pages/Menu';
 import { Shops } from './pages/Shops';
 
 function App() {
 	return (
 		<>
-			<nav>
-				<ul>
-					<li>
-						<Link to="/">Home</Link>
-					</li>
-					<li>
-						<Link to="/collections">Collection</Link>
-					</li>
-					<li>
-						<Link to="/menus">Menu</Link>
-					</li>
-					<li>
-						<Link to="/blogs">Blogs</Link>
-					</li>
-					<li>
-						<Link to="/shops">Shop</Link>
-					</li>
-				</ul>
-			</nav>
+			<Navigation></Navigation>
 			<Routes>
 				<Route path="/" element={<Homepage />} />
 				<Route path="/collections" element={<Collections />} />
