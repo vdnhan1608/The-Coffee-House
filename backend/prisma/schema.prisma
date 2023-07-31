@@ -22,15 +22,6 @@ model categories {
   drinks    drinks[]
 }
 
-model discount {
-  id          String   @id(map: "discount_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  user_id     String   @db.Uuid
-  description String?
-  thumbnail   String?  @db.VarChar
-  due_date    DateTime @db.Timestamptz(6)
-  users       users    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "discount_fk")
-}
-
 model drinks {
   id         String     @id(map: "drinks_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name       String     @db.VarChar
@@ -58,12 +49,21 @@ model shops {
 }
 
 model users {
-  id           String     @id(map: "users_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
-  phone_number String     @db.VarChar
-  address      String     @db.VarChar
+  id           String      @id(map: "users_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  phone_number String      @db.VarChar
+  address      String      @db.VarChar
   points       Int?
   password     Bytes
-  created_at   DateTime?  @db.Timestamptz(6)
-  discount     discount[]
+  created_at   DateTime?   @db.Timestamptz(6)
+  discounts    discounts[]
   orders       orders[]
+}
+
+model discounts {
+  id          String   @id(map: "discount_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  user_id     String   @db.Uuid
+  description String?
+  thumbnail   String?  @db.VarChar
+  due_date    DateTime @db.Timestamptz(6)
+  users       users    @relation(fields: [user_id], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "discount_fk")
 }
