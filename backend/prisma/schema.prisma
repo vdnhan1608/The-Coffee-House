@@ -8,7 +8,7 @@ datasource db {
 }
 
 model blogs {
-  id         String   @id(map: "blogs_pk") @db.Uuid
+  id         String   @id(map: "blogs_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   thumbnail  String   @db.VarChar
   title      String   @db.VarChar
   content    String
@@ -16,14 +16,14 @@ model blogs {
 }
 
 model categories {
-  id        String   @id(map: "categories_pk") @db.Uuid
+  id        String   @id(map: "categories_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name      String   @db.VarChar
   thumbnail String?  @db.VarChar
   drinks    drinks[]
 }
 
 model discount {
-  id          String   @id(map: "discount_pk") @db.Uuid
+  id          String   @id(map: "discount_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   user_id     String   @db.Uuid
   description String?
   thumbnail   String?  @db.VarChar
@@ -32,7 +32,7 @@ model discount {
 }
 
 model drinks {
-  id         String     @id(map: "drinks_pk") @db.Uuid
+  id         String     @id(map: "drinks_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   name       String     @db.VarChar
   price      Int
   category   String     @db.Uuid
@@ -42,7 +42,7 @@ model drinks {
 }
 
 model orders {
-  id       String   @id(map: "orders_pk") @db.Uuid
+  id       String   @id(map: "orders_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   user_id  String   @db.Uuid
   drink_id String   @db.Uuid
   date     DateTime @db.Timestamptz(6)
@@ -52,13 +52,13 @@ model orders {
 }
 
 model shops {
-  id        String @id(map: "shops_pk") @db.Uuid
+  id        String @id(map: "shops_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   address   String @db.VarChar
   thumbnail String @db.VarChar
 }
 
 model users {
-  id           String     @id(map: "users_pk") @db.Uuid
+  id           String     @id(map: "users_pk") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
   phone_number String     @db.VarChar
   address      String     @db.VarChar
   points       Int?
