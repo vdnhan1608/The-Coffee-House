@@ -1,0 +1,35 @@
+.recommendationList {
+	width: 100%;
+	height: auto;
+	margin: 50px 80px auto 80px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.drink {
+	width: auto;
+	height: auto;
+}
+.drink img {
+	width: 250px;
+	height: 250px;
+	border-radius: 15px;
+	/* box-shadow: 2px 2px 2px 2px #e1e1e1; */
+	filter: drop-shadow(10px 10px 10px #e1e1e1);
+}
+
+.name {
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.price {
+	font-family: sans-serif;
+	font-weight: lighter;
+	color: rgb(102 102 102);
+}
+
+.thumbnail {
+	width: 500px;
+	height: auto;
+}
