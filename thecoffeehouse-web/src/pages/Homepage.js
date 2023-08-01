@@ -80,8 +80,9 @@ const shops = [
 ];
 export function Homepage() {
 	return (
-		<div style={{ display: 'flex', flexDirection: 'column' }}>
-			<h1>Homepage</h1>
+		<div
+			style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
+		>
 			<ImageSlider images={images}></ImageSlider>
 			<Recommendation list={recommendationList}></Recommendation>
 			<NewDrink></NewDrink>

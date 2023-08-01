@@ -1,7 +1,7 @@
 .recommendationList {
-	width: 100%;
+	width: 80%;
 	height: auto;
-	margin: 50px 80px auto 80px;
+	margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 }

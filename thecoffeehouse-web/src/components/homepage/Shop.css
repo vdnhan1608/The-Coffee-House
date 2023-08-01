@@ -1,6 +1,10 @@
 .shopContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	margin-top: 100px;
-	width: 100%;
+	width: 80%;
 	height: 300px;
 }
 
@@ -9,5 +13,31 @@
 	height: 100%;
 }
 
+.shopDes {
+	justify-content: center;
+}
+.shopDes > h1 {
+	font-family: sans-serif;
+	font-weight: lighter;
+}
+
 .ExploreShopBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50%;
+	height: 40px;
+	background-color: red;
+	font-family: sans-serif;
+	color: white;
+	border-radius: 10px;
+}
+
+.ExploreShopBtn:hover {
+	background-color: white;
+	color: rgb(229 121 5);
+	cursor: pointer;
+	border-color: #666666;
+	border-style: solid;
 }
