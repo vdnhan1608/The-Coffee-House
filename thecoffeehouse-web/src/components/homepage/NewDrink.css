@@ -1,0 +1,47 @@
+.newDrinkContainer {
+	position: relative;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	/* padding: 0; */
+	display: flex;
+	align-self: center;
+	width: 80%;
+	height: 500px;
+	background-image: url('https://file.hstatic.net/1000075078/file/desktop_bg_350cd1de6f894c64825cd4d961866cb0.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: black;
+}
+
+.info {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 50%;
+	height: 100%;
+}
+
+.info p {
+	font-family: sans-serif;
+	color: #666666;
+}
+
+.info img {
+	width: 100%;
+	height: auto;
+}
+
+.button {
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #778b37;
+	color: white;
+	border-radius: 10px;
+}

@@ -1,4 +1,4 @@
-nav {
+.navigation {
 	margin-top: 0px;
 	display: flex;
 	justify-content: center;
@@ -10,7 +10,7 @@ nav {
 	border-style: outset;
 }
 
-ul {
+.navigation ul {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -19,14 +19,14 @@ ul {
 	height: 100%;
 }
 
-h1 {
+.navigation h1 {
 	font-family: 'Source Serif 4';
 	font-size: medium;
 	color: black;
 	text-align: center;
 }
 
-h1:hover {
+.navigation h1:hover {
 	font-family: 'Source Serif 4';
 	color: rgb(229 121 5);
 }

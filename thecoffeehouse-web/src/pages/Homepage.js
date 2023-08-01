@@ -1,5 +1,7 @@
 import ImageSlider from '../components/homepage/ImageSlider';
+import NewDrink from '../components/homepage/NewDrink';
 import Recommendation from '../components/homepage/Recommendation';
+import Shop from '../components/homepage/Shop';
 
 // FETCH LATER
 const images = [
@@ -52,12 +54,38 @@ const recommendationList = [
 		price: 19000,
 	},
 ];
+
+const shops = [
+	{
+		name: 'By The Coffee House',
+		description:
+			'Nơi cuộc hẹn tràn đầy với Cà phê đặc sản, Món ăn đa bản sắc và không gian cảm hứng',
+		thumbnail:
+			'https://file.hstatic.net/1000075078/file/sig-01_2c5b08d6b9294c82ac64901e12ae6106_master.png',
+	},
+	{
+		name: 'Grand View',
+		description:
+			'Nhà mới quận 7 tọa lạc tại khu đô thị The Grand View, với những khu phố hiện đại, sầm uất, và nhộn nhiệp',
+		thumbnail:
+			'https://file.hstatic.net/1000075078/file/grandview1_281ebbd42e1e40368c783002bfda0054_master.jpg',
+	},
+	{
+		name: 'Grace Tower',
+		description:
+			'Nhà mới Quận 7 tọa lạc tại The Grace Tower, thuộc khu phố nhộn nhịp, sầm uất. Cửa hàng nổi bật với không gian nhỏ nhắn nhưng lại có nhiều nguồn sáng tự nhiên, mang đến sự hứng thú năng động',
+		thumbnail:
+			'https://file.hstatic.net/1000075078/file/_kh_9431__1__e19a7a49963245b39b280271da3cd9fb_master.jpg',
+	},
+];
 export function Homepage() {
 	return (
-		<>
+		<div style={{ display: 'flex', flexDirection: 'column' }}>
 			<h1>Homepage</h1>
 			<ImageSlider images={images}></ImageSlider>
 			<Recommendation list={recommendationList}></Recommendation>
-		</>
+			<NewDrink></NewDrink>
+			<Shop shops={shops}></Shop>
+		</div>
 	);
 }

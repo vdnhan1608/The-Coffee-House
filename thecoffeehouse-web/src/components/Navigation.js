@@ -3,7 +3,7 @@ import './Navigation.css';
 
 export function Navigation() {
 	return (
-		<nav>
+		<nav className="navigation">
 			<ul>
 				<li>
 					<Link to="/" style={{ textDecoration: 'none' }}>
