@@ -1,0 +1,61 @@
+.collectionsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.coffees {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-items: center;
+	grid-gap: 10px;
+}
+
+.teas {
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	align-self: center;
+}
+
+.coffees img {
+	width: 250px;
+	height: 250px;
+	border-radius: 15px;
+	filter: drop-shadow(10px 10px 10px #e1e1e1);
+}
+
+.teas img {
+	width: 250px;
+	height: 250px;
+	border-radius: 15px;
+	filter: drop-shadow(10px 10px 10px #e1e1e1);
+}
+
+.coffeeItemName {
+	font-weight: bold;
+}
+
+.coffeeItemPrice {
+	font-weight: lighter;
+	color: #666;
+}
+.teaItemName {
+	font-weight: bold;
+}
+
+.teaItemPrice {
+	font-weight: lighter;
+	color: #666;
+}
+
+.coffeesContainer {
+	width: 80%;
+}
+
+.teasContainer {
+	width: 80%;
+}

@@ -3,6 +3,7 @@ import { useState } from 'react';
 const Shop = ({ shops }) => {
 	console.log(shops);
 	const [currentIndex, setCurrentIndex] = useState(0);
+	// TODO THis later
 	return (
 		<div className="shopContainer">
 			<div className="shopDes">
