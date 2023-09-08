@@ -6,7 +6,7 @@ import { Collections } from './pages/Collections';
 import { Homepage } from './pages/Homepage';
 import { Menu } from './pages/Menu';
 import { Shops } from './pages/Shops';
-
+import { Counter } from './features/counter/Counter';
 function App() {
 	return (
 		<>
@@ -17,6 +17,7 @@ function App() {
 				<Route path="/menus" element={<Menu />} />
 				<Route path="/blogs" element={<Blogs />} />
 				<Route path="/shops" element={<Shops />} />
+				<Route path="/counter" element={<Counter />} />
 			</Routes>
 		</>
 	);
