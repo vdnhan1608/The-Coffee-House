@@ -1,5 +1,4 @@
 import '../layouts/Coffees.css';
-import Grid from '@mui/material/Grid';
 
 const teas = [
 	{

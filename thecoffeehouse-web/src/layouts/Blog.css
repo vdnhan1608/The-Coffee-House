@@ -1,5 +1,11 @@
 .blog-container {
 	background-color: #fff7e6;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 p {
 	font-family: 'SF Pro Display', sans-serif;
@@ -8,6 +14,7 @@ p {
 	color: black;
 	font-size: large;
 	font-weight: bold;
+	text-overflow: clip;
 }
 .blog-topic:hover {
 	color: orange;
@@ -15,8 +22,30 @@ p {
 
 .blog-thumbnail {
 	border-radius: 3%;
+	width: 100%;
+	height: auto;
 }
 
 .blog-date {
 	color: #00000099;
+	text-overflow: clip;
+	font-weight: lighter;
+}
+
+.blog {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+
+.blog-content {
+	text-overflow: clip;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+.blog-title {
+	font-weight: bold;
 }

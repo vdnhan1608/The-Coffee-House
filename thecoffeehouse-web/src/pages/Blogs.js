@@ -168,22 +168,28 @@ const BLOGS = [
 ];
 
 const TOPICS = ['Ưu đãi đặc biệt', 'Cập nhật từ nhà', '#CoffeeLover'];
+
+const limitContent = (text) => {
+	if (text.length > 150) return text.slice(0, 150) + '...';
+};
 export function Blogs() {
 	return (
 		<div className="blog-container">
 			{TOPICS.map((itemTopic, indexTopic) => (
 				<div key={indexTopic}>
 					<p className="blog-topic">{itemTopic}</p>
-					{BLOGS.filter((item) => item.topic === itemTopic).map(
-						(item, index) => (
-							<div>
-								<img className="blog-thumbnail" src={item.thumbnail} alt="" />
-								<p className="blog-date">{item.created_at.toString()}</p>
-								<p className="blog-title">{item.title}</p>
-								<p className="blog-content">{item.content}</p>
-							</div>
-						)
-					)}
+					<div className="blog">
+						{BLOGS.filter((item) => item.topic === itemTopic).map(
+							(item, index) => (
+								<div>
+									<img className="blog-thumbnail" src={item.thumbnail} alt="" />
+									<p className="blog-date">12/02/2023</p>
+									<p className="blog-title">{item.title}</p>
+									<p className="blog-content">{limitContent(item.content)}</p>
+								</div>
+							)
+						)}
+					</div>
 				</div>
 			))}
 		</div>
