@@ -1,0 +1,22 @@
+.blog-container {
+	background-color: #fff7e6;
+}
+p {
+	font-family: 'SF Pro Display', sans-serif;
+}
+.blog-topic {
+	color: black;
+	font-size: large;
+	font-weight: bold;
+}
+.blog-topic:hover {
+	color: orange;
+}
+
+.blog-thumbnail {
+	border-radius: 3%;
+}
+
+.blog-date {
+	color: #00000099;
+}
