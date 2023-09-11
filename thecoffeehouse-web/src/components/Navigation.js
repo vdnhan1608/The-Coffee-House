@@ -11,8 +11,13 @@ export function Navigation() {
 					</Link>
 				</li>
 				<li>
-					<Link to="/collections" style={{ textDecoration: 'none' }}>
-						<h1>Cà phê / Trà</h1>
+					<Link to="/coffees" style={{ textDecoration: 'none' }}>
+						<h1>Cà phê</h1>
+					</Link>
+				</li>
+				<li>
+					<Link to="/teas" style={{ textDecoration: 'none' }}>
+						<h1>Trà</h1>
 					</Link>
 				</li>
 				<li>

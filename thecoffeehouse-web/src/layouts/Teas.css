@@ -1,4 +1,4 @@
-.collectionsContainer {
+.coffeesContainer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,6 +19,26 @@
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	align-self: center;
+}
+
+@media screen and (max-width: 1200px) {
+	.coffees,
+	.teas {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+@media screen and (max-width: 900px) {
+	.coffees,
+	.teas {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 786px) {
+	.coffees,
+	.teas {
+		grid-template-columns: 1fr;
+	}
 }
 
 .coffees img {
