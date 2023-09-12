@@ -5,6 +5,7 @@
 	position: relative;
 	display: flex;
 	flex-direction: row;
+	transition: 0.3s ease-in;
 }
 
 .prevBtn,

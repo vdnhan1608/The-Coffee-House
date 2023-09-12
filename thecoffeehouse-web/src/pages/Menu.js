@@ -298,81 +298,82 @@ export function Menu() {
 				<p>Hi-tea Healthy</p>
 				<p>Trà trái cây</p>
 			</div>
-			{/* <div className="menu">
-				<div className="menu-coffee-container">
-					<h2>Cà Phê</h2>
-					<div className="menu-coffee">
-						{coffees.map((item, index) => (
-							<div className="menu-coffee-item">
-								<img src={item.image} alt="" />
-								<p className="menu-coffee-item-name">{item.name}</p>
-								<p className="menu-coffee-item-price">{item.price}</p>
-							</div>
-						))}
+			<div className="content">
+				<div className="menu">
+					<div className="menu-coffee-container">
+						<h2>Cà Phê</h2>
+						<div className="menu-coffee">
+							{coffees.map((item, index) => (
+								<div className="menu-coffee-item">
+									<img src={item.image} alt="" />
+									<p className="menu-coffee-item-name">{item.name}</p>
+									<p className="menu-coffee-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="menu-cloudTea-container">
+						<h2>Cloud Tea</h2>
+						<div className="menu-cloudTea">
+							{cloudTeas.map((item, index) => (
+								<div className="menu-cloudTea-item">
+									<img src={item.image} alt="" />
+									<p className="menu-cloudTea-item-name">{item.name}</p>
+									<p className="menu-cloudTea-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="menu-cloudFee-container">
+						<h2>Cloud Fee</h2>
+						<div className="menu-cloudFee">
+							{cloudFees.map((item, index) => (
+								<div className="menu-cloudFee-item">
+									<img src={item.image} alt="" />
+									<p className="menu-cloudFee-item-name">{item.name}</p>
+									<p className="menu-cloudFee-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="menu-frosty-container">
+						<h2>Frosty</h2>
+						<div className="menu-frosty">
+							{frosties.map((item, index) => (
+								<div className="menu-frosty-item">
+									<img src={item.image} alt="" />
+									<p className="menu-frosty-item-name">{item.name}</p>
+									<p className="menu-frosty-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="menu-hi-tea-healthy-container">
+						<h2>Hi-tea Healthy</h2>
+						<div className="menu-hi-tea-healthy">
+							{hiTeaHealthy.map((item, index) => (
+								<div className="menu-hi-tea-healthy-item">
+									<img src={item.image} alt="" />
+									<p className="menu-hi-tea-healthy-item-name">{item.name}</p>
+									<p className="menu-hi-tea-healthy-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="menu-fruitTea-container">
+						<h2>Trà Trái Cây</h2>
+						<div className="menu-fruitTea">
+							{fruitTeas.map((item, index) => (
+								<div className="menu-fruitTea-item">
+									<img src={item.image} alt="" />
+									<p className="menu-fruitTea-item-name">{item.name}</p>
+									<p className="menu-hi-fruitTea-item-price">{item.price}</p>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
-				<div className="menu-cloudTea-container">
-					<h2>Cloud Tea</h2>
-					<div className="menu-cloudTea">
-						{cloudTeas.map((item, index) => (
-							<div className="menu-cloudTea-item">
-								<img src={item.image} alt="" />
-								<p className="menu-cloudTea-item-name">{item.name}</p>
-								<p className="menu-cloudTea-item-price">{item.price}</p>
-							</div>
-						))}
-					</div>
-				</div>
-				<div className="menu-cloudFee-container">
-					<h2>Cloud Fee</h2>
-					<div className="menu-cloudFee">
-						{cloudFees.map((item, index) => (
-							<div className="menu-cloudFee-item">
-								<img src={item.image} alt="" />
-								<p className="menu-cloudFee-item-name">{item.name}</p>
-								<p className="menu-cloudFee-item-price">{item.price}</p>
-							</div>
-						))}
-					</div>
-				</div>
-				<div className="menu-frosty-container">
-					<h2>Frosty</h2>
-					<div className="menu-frosty">
-						{frosties.map((item, index) => (
-							<div className="menu-frosty-item">
-								<img src={item.image} alt="" />
-								<p className="menu-frosty-item-name">{item.name}</p>
-								<p className="menu-frosty-item-price">{item.price}</p>
-							</div>
-						))}
-					</div>
-				</div>
-				<div className="menu-hi-tea-healthy-container">
-					<h2>Hi-tea Healthy</h2>
-					<div className="menu-hi-tea-healthy">
-						{hiTeaHealthy.map((item, index) => (
-							<div className="menu-hi-tea-healthy-item">
-								<img src={item.image} alt="" />
-								<p className="menu-hi-tea-healthy-item-name">{item.name}</p>
-								<p className="menu-hi-tea-healthy-item-price">{item.price}</p>
-							</div>
-						))}
-					</div>
-				</div>
-				<div className="menu-fruitTea-container">
-					<h2>Trà Trái Cây</h2>
-					<div className="menu-fruitTea">
-						{fruitTeas.map((item, index) => (
-							<div className="menu-fruitTea-item">
-								<img src={item.image} alt="" />
-								<p className="menu-fruitTea-item-name">{item.name}</p>
-								<p className="menu-hi-fruitTea-item-price">{item.price}</p>
-							</div>
-						))}
-					</div>
-				</div>
-			</div> */}
-			{/* Uncomment this later */}
+			</div>
 		</div>
 	);
 }

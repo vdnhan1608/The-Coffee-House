@@ -30,11 +30,6 @@ export function Navigation() {
 						<h1>Chuyện nhà</h1>
 					</Link>
 				</li>
-				<li>
-					<Link to="/shops" style={{ textDecoration: 'none' }}>
-						<h1>Cửa hàng</h1>
-					</Link>
-				</li>
 			</ul>
 		</nav>
 	);
