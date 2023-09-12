@@ -298,7 +298,7 @@ export function Menu() {
 				<p>Hi-tea Healthy</p>
 				<p>Trà trái cây</p>
 			</div>
-			<div className="menu">
+			{/* <div className="menu">
 				<div className="menu-coffee-container">
 					<h2>Cà Phê</h2>
 					<div className="menu-coffee">
@@ -371,7 +371,8 @@ export function Menu() {
 						))}
 					</div>
 				</div>
-			</div>
+			</div> */}
+			{/* Uncomment this later */}
 		</div>
 	);
 }
